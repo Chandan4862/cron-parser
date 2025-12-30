@@ -10,10 +10,11 @@ import { CronExpression } from './CronExpression';
 
 export class CronParser {
   static parse(input: string): CronExpression {
-    const tokens = input.trim();
+    //splits on one or more whitespace characters matches spaces, tabs, and newlines.
+    const tokens = input.trim().split(/\s+/);
 
     if (tokens.length < 6) {
-      throw new Error('Invalid cron expression');
+      throw new Error('Please provide valid expression');
     }
 
     const [min, hour, dom, mon, dow, ...command] = tokens;
