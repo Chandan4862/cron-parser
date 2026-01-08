@@ -1,12 +1,9 @@
 {
   "name": "cron-parser-cli",
   "version": "1.0.0",
-  "description": "CLI application to parse and expand cron expressions",
+  "description": "CLI application which parses a cron string and expands each field to show the times at which it will run",
   "type": "commonjs",
   "main": "dist/index.js",
-  "bin": {
-    "cron-parser": "dist/index.js"
-  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "start": "node dist/index.js",
@@ -15,13 +12,7 @@
     "lint": "eslint . --ext .ts",
     "format": "prettier --write ."
   },
-  "keywords": [
-    "cron",
-    "parser",
-    "cli",
-    "typescript"
-  ],
-  "author": "Your Name",
+  "author": "Chandan Ojha",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.11",
